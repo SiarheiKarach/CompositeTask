@@ -11,6 +11,7 @@ import com.karach.compositetask.service.TextService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -27,7 +28,7 @@ public class TextServiceImpl implements TextService {
 
     @Override
     public TextComponent parseText(String filePath) throws CompositeException {
-        String text = textReader.readText(filePath);
+        String text = textReader.readText(filePath, StandardCharsets.UTF_8);
         return text != null ? textParser.parse(text) : null;
     }
 
