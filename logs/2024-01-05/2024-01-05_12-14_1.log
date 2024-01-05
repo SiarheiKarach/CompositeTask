@@ -1,0 +1,11 @@
+12:11:55.846 [main] INFO  com.karach.compositetask.main.Main - Composed Text: 
+12:11:55.854 [main] INFO  com.karach.compositetask.main.Main - Text composition completed successfully.
+12:12:38.435 [main] ERROR com.karach.compositetask.main.Main - A CompositeException occurred: File not found: src\main\resources\yew.txt
+12:13:39.927 [main] INFO  karach.compositetask.parser.impl.SymbolTextParser - Parsed symbol: I
+12:13:39.931 [main] INFO  karach.compositetask.parser.impl.SymbolTextParser - Parsed symbol: I
+12:13:39.931 [main] INFO  karach.compositetask.parser.impl.SymbolTextParser - Parsed symbol: T
+12:13:39.931 [main] INFO  karach.compositetask.parser.impl.SymbolTextParser - Parsed symbol: I
+12:13:39.932 [main] INFO  karach.compositetask.parser.impl.SentenceTextParser - Parsed sentence: IITI
+12:13:39.934 [main] INFO  com.karach.compositetask.main.Main - Composed Text: 
+12:13:39.935 [main] INFO  com.karach.compositetask.main.Main - Text composition completed successfully.
+12:14:01.640 [main] ERROR com.karach.compositetask.main.Main - A CompositeException occurred: File not found: text.txt

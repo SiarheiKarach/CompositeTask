@@ -1,11 +1,10 @@
 package com.karach.compositetask.reader;
 
 import com.karach.compositetask.exception.CompositeException;
+import com.karach.compositetask.service.TextService;
 
-import java.nio.charset.Charset;
+import java.nio.file.Path;
 
 public interface TextReader {
-    String readText(String filePath) throws CompositeException;
-
-    String readText(String filePath, Charset charset) throws CompositeException;
+    String read(Path filePath) throws CompositeException;
 }

@@ -1,13 +1,5 @@
-23:03:03.904 [main] ERROR karach.compositetask.reader.impl.TextReaderImpl - Error reading text from file
-java.nio.file.NoSuchFileException: This domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.
-	at sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85) ~[?:?]
-	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?]
-	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108) ~[?:?]
-	at sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:236) ~[?:?]
-	at java.nio.file.Files.newByteChannel(Files.java:380) ~[?:?]
-	at java.nio.file.Files.newByteChannel(Files.java:432) ~[?:?]
-	at java.nio.file.Files.readAllBytes(Files.java:3288) ~[?:?]
-	at java.nio.file.Files.readString(Files.java:3366) ~[?:?]
-	at com.karach.compositetask.reader.impl.TextReaderImpl.readText(TextReaderImpl.java:23) [classes/:?]
-	at com.karach.compositetask.service.impl.TextServiceImpl.parseText(TextServiceImpl.java:31) [classes/:?]
-	at Main.main(Main.java:40) [classes/:?]
+12:14:54.844 [main] INFO  karach.compositetask.parser.impl.SymbolTextParser - Parsed symbol: B
+12:14:54.853 [main] INFO  karach.compositetask.parser.impl.SymbolTextParser - Parsed symbol: B
+12:14:54.853 [main] INFO  karach.compositetask.parser.impl.SentenceTextParser - Parsed sentence: IBBBB
+12:14:54.856 [main] INFO  com.karach.compositetask.main.Main - Composed Text: 
+12:14:54.857 [main] INFO  com.karach.compositetask.main.Main - Text composition completed successfully.

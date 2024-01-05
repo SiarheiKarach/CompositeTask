@@ -10,11 +10,6 @@ public enum TextComponentType {
             "\\s+"),           // The space between words
     WORD("\\b\\w+\\b"),       // A word with word boundaries
     SYMBOL("."),              // Any single character
-
-    DOT("\\."),
-    QUESTION("\\?"),
-    EXCLAMATION("!"),
-    ELLIPSIS("…"),
     COMPOSITE;
 
     private String[] regexParts;

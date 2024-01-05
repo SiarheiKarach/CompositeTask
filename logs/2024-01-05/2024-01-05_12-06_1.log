@@ -1,0 +1,11 @@
+10:54:31.092 [main] ERROR com.karach.compositetask.main.Main - An error occurred: Error reading text file
+11:52:28.835 [main] INFO  com.karach.compositetask.main.Main - Text composition completed successfully.
+11:53:26.611 [main] INFO  com.karach.compositetask.main.Main - 
+11:53:26.615 [main] INFO  com.karach.compositetask.main.Main - Text composition completed successfully.
+11:55:40.949 [main] INFO  com.karach.compositetask.main.Main - Composed Text: 
+11:55:40.953 [main] INFO  com.karach.compositetask.main.Main - Text composition completed successfully.
+11:56:30.741 [main] INFO  com.karach.compositetask.main.Main - Composed Text: 
+11:56:30.746 [main] INFO  com.karach.compositetask.main.Main - Text composition completed successfully.
+11:56:46.459 [main] ERROR com.karach.compositetask.main.Main - A CompositeException occurred: File not found: text.txt
+11:56:55.405 [main] INFO  com.karach.compositetask.main.Main - Composed Text: 
+11:56:55.409 [main] INFO  com.karach.compositetask.main.Main - Text composition completed successfully.

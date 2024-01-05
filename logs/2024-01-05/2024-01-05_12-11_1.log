@@ -1,0 +1,11 @@
+12:08:04.241 [main] INFO  karach.compositetask.parser.impl.SymbolTextParser - Parsed symbol: B
+12:08:04.250 [main] INFO  karach.compositetask.parser.impl.SymbolTextParser - Parsed symbol: B
+12:08:04.250 [main] INFO  karach.compositetask.parser.impl.SentenceTextParser - Parsed sentence: IBBBB
+12:08:04.266 [main] INFO  com.karach.compositetask.main.Main - Composed Text: 
+12:08:04.267 [main] INFO  com.karach.compositetask.main.Main - Text composition completed successfully.
+12:11:55.822 [main] INFO  karach.compositetask.parser.impl.SymbolTextParser - Parsed symbol: I
+12:11:55.827 [main] INFO  karach.compositetask.parser.impl.SymbolTextParser - Parsed symbol: B
+12:11:55.828 [main] INFO  karach.compositetask.parser.impl.SymbolTextParser - Parsed symbol: B
+12:11:55.832 [main] INFO  karach.compositetask.parser.impl.SymbolTextParser - Parsed symbol: B
+12:11:55.833 [main] INFO  karach.compositetask.parser.impl.SymbolTextParser - Parsed symbol: B
+12:11:55.833 [main] INFO  karach.compositetask.parser.impl.SentenceTextParser - Parsed sentence: IBBBB

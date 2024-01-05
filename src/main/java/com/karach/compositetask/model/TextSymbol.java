@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class TextSymbol implements TextComponent {
-    private char symbol;
+    private final char symbol;
     private TextComponentType type;
 
     public TextSymbol(char symbol, TextComponentType type) {

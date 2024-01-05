@@ -27,9 +27,11 @@ public class LexemeTextParser implements TextParser {
         return lexemeComposite;
     }
 
-    private List<TextComponent> parseComponents(String text) {
+    @Override
+    public List<TextComponent> parseComponents(String text) {
         List<TextComponent> components = new ArrayList<>();
-        Pattern pattern = Pattern.compile("\\b[^\\s]+\\b");
+        String regex = TextComponentType.LEXEME.getRegex();
+        Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(text);
 
         while (matcher.find()) {
@@ -39,5 +41,29 @@ public class LexemeTextParser implements TextParser {
         }
 
         return components;
+    }
+    @Override
+    public void setType(TextComponent component, TextComponentType type) {
+
+    }
+
+    @Override
+    public TextComponentType getType(TextComponent component) {
+        return null;
+    }
+
+    @Override
+    public List<TextComponent> getChildren(TextComponent component) {
+        return null;
+    }
+
+    @Override
+    public void setChildren(TextComponent component, List<TextComponent> children) {
+
+    }
+
+    @Override
+    public String toString(TextComponent component) {
+        return null;
     }
 }

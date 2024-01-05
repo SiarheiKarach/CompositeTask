@@ -2,10 +2,12 @@ package com.karach.compositetask.service;
 
 import com.karach.compositetask.exception.CompositeException;
 import com.karach.compositetask.model.TextComponent;
+import com.karach.compositetask.parser.TextParser;
+import com.karach.compositetask.reader.TextReader;
+
+import java.io.IOException;
 
 public interface TextService {
-
-    TextComponent parseText(String filePath) throws CompositeException;
 
     String composeText(TextComponent textComponent);
 
@@ -19,4 +21,4 @@ public interface TextService {
 
     void countVowelsAndConsonantsInSentence(TextComponent textComponent);
 
-}
+    }

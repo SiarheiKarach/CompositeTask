@@ -11,7 +11,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ParagraphTextParser implements TextParser {
-    private final TextParser nextParser;
+    private TextParser nextParser;
 
     public ParagraphTextParser(TextParser nextParser) {
         this.nextParser = nextParser;
@@ -31,5 +31,54 @@ public class ParagraphTextParser implements TextParser {
         }
 
         return paragraphComposite;
+    }
+
+    @Override
+    public List<TextComponent> parseComponents(String text) {
+        throw new UnsupportedOperationException("ParagraphTextParser does not support parseComponents method.");
+    }
+
+    @Override
+    public void setType(TextComponent component, TextComponentType type) {
+        if (component instanceof TextComposite) {
+            ((TextComposite) component).setType(type);
+        }
+    }
+
+    @Override
+    public TextComponentType getType(TextComponent component) {
+        if (component instanceof TextComposite) {
+            return ((TextComposite) component).getType();
+        }
+        return null;
+    }
+
+    @Override
+    public List<TextComponent> getChildren(TextComponent component) {
+        if (component instanceof TextComposite) {
+            return ((TextComposite) component).getChildren();
+        }
+        return new ArrayList<>();
+    }
+
+    @Override
+    public void setChildren(TextComponent component, List<TextComponent> children) {
+        if (component instanceof TextComposite) {
+            ((TextComposite) component).setChildren(children);
+        }
+    }
+
+    @Override
+    public String toString(TextComponent component) {
+        if (component instanceof TextComposite) {
+            List<TextComponent> children = ((TextComposite) component).getChildren();
+            StringBuilder result = new StringBuilder();
+            for (TextComponent child : children) {
+                result.append(child.toString());
+            }
+            return result.toString();
+        } else {
+            return "";
+        }
     }
 }

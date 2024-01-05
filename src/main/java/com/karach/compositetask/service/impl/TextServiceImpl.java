@@ -1,6 +1,5 @@
 package com.karach.compositetask.service.impl;
 
-import com.karach.compositetask.exception.CompositeException;
 import com.karach.compositetask.model.TextComponent;
 import com.karach.compositetask.model.TextComponentType;
 import com.karach.compositetask.model.TextComposite;
@@ -11,25 +10,18 @@ import com.karach.compositetask.service.TextService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.nio.charset.StandardCharsets;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class TextServiceImpl implements TextService {
-    private final TextReader textReader;
-    private final TextParser textParser;
     private static final Logger logger = LogManager.getLogger();
+    private final TextReader textReader;
+    private final TextParser sentenceTextParser;
 
-    public TextServiceImpl(TextReader textReader, TextParser textParser) {
+    public TextServiceImpl(TextReader textReader, TextParser sentenceTextParser) {
         this.textReader = textReader;
-        this.textParser = textParser;
-    }
-
-    @Override
-    public TextComponent parseText(String filePath) throws CompositeException {
-        String text = textReader.readText(filePath, StandardCharsets.UTF_8);
-        return text != null ? textParser.parse(text) : null;
+        this.sentenceTextParser = sentenceTextParser;
     }
 
     @Override
@@ -41,9 +33,11 @@ public class TextServiceImpl implements TextService {
 
     private void composeTextRecursively(TextComponent textComponent, StringBuilder stringBuilder) {
         if (textComponent.getType() == TextComponentType.SYMBOL) {
-            stringBuilder.append(((TextSymbol) textComponent).getSymbol());
+            stringBuilder.append(((TextSymbol) textComponent).getSymbol()).append(" ");
         } else if (textComponent.getType() == TextComponentType.COMPOSITE) {
-            for (TextComponent child : ((TextComposite) textComponent).getChildren()) {
+            List<TextComponent> children = ((TextComposite) textComponent).getChildren();
+            for (TextComponent child : children) {
+                logger.debug("Processing child component: {}", child);
                 composeTextRecursively(child, stringBuilder);
             }
         }
